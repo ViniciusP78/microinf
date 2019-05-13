@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Micro Informática</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="menu">
+                <h2>Menu</h2>
+
+                <h3>TP1</h3>
+                <ul>
+                    <li><a href="tp1ex1.html">Exercício 1</a></li>
+                    <li><a href="tp1ex2.html">Exercício 2</a></li>
+                    <li><a href="tp1ex3.html">Exercício 3</a></li>
+                    <li><a href="tp1ex4.html">Exercício 4</a></li>
+                    <li><a href="tp1ex5.html">Exercício 5</a></li>
+                </ul>
+                
+                <h3>TP2</h3>
+                <ul>
+                    <li><a href="tp2ex1.html">Exercício 1</a></li>
+                    <li><a href="tp2ex2.html">Exercício 2</a></li>
+                    <li><a href="tp2ex3.html">Exercício 3</a></li>
+                    <li><a href="tp2ex4.html">Exercício 4</a></li>
+                    <li><a href="tp2ex5.html">Exercício 5</a></li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <h2>Exercício 4</h2>
+                <div class="text">
+                        Criar um (pseudocódigo e fluxograma) que determine a data
+                        cronologicamente maior de duas datas fornecidas pelo usuário.
+                        Cada data deve ser fornecida por três valores inteiros, onde o
+                        primeiro representa o dia, o segundo o mês e o terceiro o ano.
+                        
+
+                </div>
+                <div class="input">
+                    <h2>Valores:</h2>
+                    <input type="text" id="a1" placeholder="Digite Ano 1"><br>
+                    <input type="text" id="m1" placeholder="Digite Mes 1"><br>
+                    <input type="text" id="d1" placeholder="Digite Dia 1"><br>
+                    <input type="text" id="a2" placeholder="Digite Ano 2"><br>
+                    <input type="text" id="m2" placeholder="Digite Mes 2"><br>
+                    <input type="text" id="d2" placeholder="Digite Dia 2"><br>
+
+                    <br><button onclick="exercicio()">Enviar</button>
+                </div>
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+    function exercicio(){
+
+        var a1 = parseInt(document.getElementById("a1").value);
+        var m1 = parseInt(document.getElementById("m1").value);
+        var d1 = parseInt(document.getElementById("d1").value);
+        var a2 = parseInt(document.getElementById("a2").value);
+        var m2 = parseInt(document.getElementById("m2").value);
+        var d2 = parseInt(document.getElementById("d2").value);
+        
+        if (a1 < a2) {
+            document.getElementById("result").innerHTML = "Data 2 é Maior";
+        } else if (a2 < a1) {
+            document.getElementById("result").innerHTML = "Data 1 é Maior";
+        } else if (m1 < m2){
+            document.getElementById("result").innerHTML = "Data 2 é Maior";
+        } else if (m2 < m1) {
+            document.getElementById("result").innerHTML = "Data 1 é Maior";
+        } else if (d1 < d2) {
+            document.getElementById("result").innerHTML = "Data 2 é Maior";
+        } else if (d2 < d1) {
+            document.getElementById("result").innerHTML = "Data 1 é Maior";
+        } else {
+            document.getElementById("result").innerHTML = "Datas iguais";
+        }
+
+    }
+    
+
+</script>

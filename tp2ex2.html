@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Micro Informática</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="menu">
+                <h2>Menu</h2>
+
+                <h3>TP1</h3>
+                <ul>
+                    <li><a href="tp1ex1.html">Exercício 1</a></li>
+                    <li><a href="tp1ex2.html">Exercício 2</a></li>
+                    <li><a href="tp1ex3.html">Exercício 3</a></li>
+                    <li><a href="tp1ex4.html">Exercício 4</a></li>
+                    <li><a href="tp1ex5.html">Exercício 5</a></li>
+                </ul>
+                
+                <h3>TP2</h3>
+                <ul>
+                    <li><a href="tp2ex1.html">Exercício 1</a></li>
+                    <li><a href="tp2ex2.html">Exercício 2</a></li>
+                    <li><a href="tp2ex3.html">Exercício 3</a></li>
+                    <li><a href="tp2ex4.html">Exercício 4</a></li>
+                    <li><a href="tp2ex5.html">Exercício 5</a></li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <h2>Exercício 2</h2>
+                <div class="text">
+                        Gere um algoritmo e pseudocódigo que verifique se um número é primo ou não.
+                        
+
+                </div>
+                <div class="input">
+                        <h2>Valores:</h2>
+                        <input type="text" id="n1" placeholder="Digite N1"><br>
+    
+                        <br><button onclick="exercicio()">Enviar</button>
+                    </div>
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+    function exercicio(){  
+
+        var n1 = parseInt(document.getElementById("n1").value);
+        
+        if (n1 == 2 || n1 == 3 || n1 == 5 || n1 == 7 || n1 == 11){
+            document.getElementById("result").innerHTML = "É Primo";
+        } else if (n1%2 == 0 || n1%3 == 0 || n1%5 == 0 || n1%7 == 0 || n1%11 == 0){
+            document.getElementById("result").innerHTML = "Não é Primo";
+        } else {
+            document.getElementById("result").innerHTML = "É Primo";
+        }
+
+
+    }
+    
+
+</script>

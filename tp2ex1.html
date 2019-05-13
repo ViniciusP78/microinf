@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Micro Informática</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="menu">
+                <h2>Menu</h2>
+
+                <h3>TP1</h3>
+                <ul>
+                    <li><a href="tp1ex1.html">Exercício 1</a></li>
+                    <li><a href="tp1ex2.html">Exercício 2</a></li>
+                    <li><a href="tp1ex3.html">Exercício 3</a></li>
+                    <li><a href="tp1ex4.html">Exercício 4</a></li>
+                    <li><a href="tp1ex5.html">Exercício 5</a></li>
+                </ul>
+                
+                <h3>TP2</h3>
+                <ul>
+                    <li><a href="tp2ex1.html">Exercício 1</a></li>
+                    <li><a href="tp2ex2.html">Exercício 2</a></li>
+                    <li><a href="tp2ex3.html">Exercício 3</a></li>
+                    <li><a href="tp2ex4.html">Exercício 4</a></li>
+                    <li><a href="tp2ex5.html">Exercício 5</a></li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <h2>Exercício 1</h2>
+                <div class="text">
+                        Faça um (pseudocódigo) que receba o salário de 25 funcionários, calcule e exiba o
+novo salário desse funcionário com a bonificação e o auxílio-escola<br>
+SALÁRIO BONIFICAÇÃO<br>
+Até R$ 500,00 5%<br>
+Entre R$ 500,01 e R$ 1.200,00 12%<br>
+Acima de R$ 1.200,00 Sem bonificação<br>
+SALÁRIO AUXILIO-ESCOLA<br>
+Até R$ 600,00 R$ 150,00<br>
+Mais de R$ 600,00 R$ 100,00<br>
+                        
+
+                </div>
+                <div class="input">
+                    <br><button onclick="exercicio()">Iniciar</button>
+                </div>
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+    function exercicio(){  
+
+        var valor;
+        var bonification;
+        var escola;
+        
+        for(i = 1; i <= 25; i++){
+            valor = prompt("Digite um salário");
+            if(valor > 1200){
+                bonification = 0;
+            } else if (valor <= 1200 && valor > 500){
+                bonification = valor * 12/100;
+            } else {
+                bonification = valor * 5/100;
+            }
+            if (valor > 600){
+                escola = 100;
+            } else {
+                escola = 150;
+            }
+            valor = parseInt(valor) + parseInt(bonification) + parseInt(escola);
+            document.getElementById("result").innerHTML += "Funcionario "+i+": "+valor+"<br>";
+
+        }
+
+    }
+    
+
+</script>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Micro Informática</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="menu">
+                <h2>Menu</h2>
+
+                <h3>TP1</h3>
+                <ul>
+                    <li><a href="tp1ex1.html">Exercício 1</a></li>
+                    <li><a href="tp1ex2.html">Exercício 2</a></li>
+                    <li><a href="tp1ex3.html">Exercício 3</a></li>
+                    <li><a href="tp1ex4.html">Exercício 4</a></li>
+                    <li><a href="tp1ex5.html">Exercício 5</a></li>
+                </ul>
+                
+                <h3>TP2</h3>
+                <ul>
+                    <li><a href="tp2ex1.html">Exercício 1</a></li>
+                    <li><a href="tp2ex2.html">Exercício 2</a></li>
+                    <li><a href="tp2ex3.html">Exercício 3</a></li>
+                    <li><a href="tp2ex4.html">Exercício 4</a></li>
+                    <li><a href="tp2ex5.html">Exercício 5</a></li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <h2>Exercício 2</h2>
+                <div class="text">
+                        Criar um (pseudocódigo e fluxograma) que a média final de um
+                        estudante é calculada com base em três notas atribuídas a um
+                        trabalho prático (peso 2), avaliação semestral (peso 3) e exame
+                        final (peso 5). A média das três notas é dada com base nos pesos.
+                        Faça um programa (pseudocódigo e fluxograma) que receba as
+                        três notas, calcule, exiba a média ponderada e a conceito:<br>
+                        MÉDIA PONDERADA CONCEITO<br>
+                        8,0 <--> 10,0 = A<br>
+                        7,0 <--> 7,9 = B<br>
+                        6,0 <--> 6,9 = C<br>
+                        5,0 <--> 5,9 = D<br>
+                        0,0 <--> 4,9 = E<br>
+                </div>
+                <div class="input">
+                    <h2>Valores:</h2>
+                    <input type="text" id="tp" placeholder="Digite TP"><br>
+                    <input type="text" id="as" placeholder="Digite Avaliação"><br>
+                    <input type="text" id="ef" placeholder="Digite Exame"><br>
+
+                    <br><button onclick="exercicio()">Enviar</button>
+                </div>
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+    function exercicio(){
+
+        var tp = document.getElementById("tp").value;
+        var as = document.getElementById("as").value;
+        var ef = document.getElementById("ef").value;
+        var calculo = ( (tp*2)+(as*3)+(ef*5) ) / 10;
+        
+        if (calculo >= 8) {
+            document.getElementById("result").innerHTML = "Média: "+calculo+" Nota A";
+        } else if (calculo < 8 && calculo >= 7) {
+            document.getElementById("result").innerHTML = "Média: "+calculo+" Nota B";
+        } else if (calculo < 7 && calculo >= 6) {
+            document.getElementById("result").innerHTML = "Média: "+calculo+" Nota C";
+        } else if (calculo < 6 && calculo >= 5) {
+            document.getElementById("result").innerHTML = "Média: "+calculo+" Nota D";
+        } else if (calculo < 5) {
+            document.getElementById("result").innerHTML = "Média: "+calculo+" Nota E";
+        }
+
+    }
+    
+
+</script>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Micro Informática</title>
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="menu">
+                <h2>Menu</h2>
+
+                <h3>TP1</h3>
+                <ul>
+                    <li><a href="tp1ex1.html">Exercício 1</a></li>
+                    <li><a href="tp1ex2.html">Exercício 2</a></li>
+                    <li><a href="tp1ex3.html">Exercício 3</a></li>
+                    <li><a href="tp1ex4.html">Exercício 4</a></li>
+                    <li><a href="tp1ex5.html">Exercício 5</a></li>
+                </ul>
+                
+                <h3>TP2</h3>
+                <ul>
+                    <li><a href="tp2ex1.html">Exercício 1</a></li>
+                    <li><a href="tp2ex2.html">Exercício 2</a></li>
+                    <li><a href="tp2ex3.html">Exercício 3</a></li>
+                    <li><a href="tp2ex4.html">Exercício 4</a></li>
+                    <li><a href="tp2ex5.html">Exercício 5</a></li>
+                </ul>
+
+            </div>
+            <div class="content">
+                <h2>Exercício 1</h2>
+                <div class="text">
+                    Faça um algoritmo que entre com 3 valores e gere a equação de 2
+                    grau, verifique as possíveis raízes.<br>
+                    Delta = (b*b)-(4*a*c).
+                </div>
+                <div class="input">
+                    <h2>Valores:</h2>
+                    <input type="text" id="a" placeholder="Digite A"><br>
+                    <input type="text" id="b" placeholder="Digite B"><br>
+                    <input type="text" id="c" placeholder="Digite C"><br>
+
+                    <br><button onclick="exercicio()">Enviar</button>
+                </div>
+                <div class="result">
+                    <h2>Resultado:</h2>
+                    <div id="result">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+</html>
+
+<script>
+    function exercicio(){
+
+        var a = document.getElementById("a").value;
+        var b = document.getElementById("b").value;
+        var c = document.getElementById("c").value;
+        var delta = (b*b)-(4*a*c);
+        
+        if (delta > 0) {
+            document.getElementById("result").innerHTML = "Há 2 Raizes reais";
+        } else if (delta == 0) {
+            document.getElementById("result").innerHTML = "Há 1 Raiz real";
+        } else if (delta < 0 ) {
+            document.getElementById("result").innerHTML = "Não há raizes reais";
+        }
+
+    }
+    
+
+</script>
