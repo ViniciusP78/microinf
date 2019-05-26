@@ -38,16 +38,8 @@
                 </ul>
             </div>
             <div class="content">
-                <h2>Exercício 5</h2>
+                <h2>Exercício 1</h2>
                 <div class="text">
-                        Faça um pseudocódigo que exiba um menu de opções e receba a
-                        opção do usuário e os dados necessários para executar cada
-                        operação:<br>
-                        MENU DE OPÇÕES<br>
-                        1. Somar dois números;<br>
-                        2. Raiz quadrada de um número;<br>
-                        Digite a opção desejada.<br>
-                        
 
                 </div>
                 <div class="input">
@@ -69,24 +61,28 @@
 <script>
     function exercicio(){  
 
-        while(true){
-            var opcao = prompt("1. Somar 2 Números \n 2. Raiz Quadrada de um Número. \n 3. Sair");
-            if( opcao == 1) {
-                var n1 = parseInt(prompt("Digite N1"));
-                var n2 = parseInt(prompt("Digite N2"));
-                document.getElementById("result").innerHTML = n1+n2;
-                break;
-            } else if (opcao == 2){
-                var n1 = Math.sqrt(prompt("Digite N1"));
-                document.getElementById("result").innerHTML = n1;
-                break
-            } else if(opcao == 3){
-                break;
-            } else {
-                alert("Opção Invalida");
+        var vector = [8];
+        var positivo = [8];
+        var negativo = [8];
+
+        
+        for(i = 1; i < 9; i++){
+            vector[i] = prompt("Digite um número");
+
+            if (vector[i] > 0){
+                positivo[i] = vector[i];
+            }else {
+                negativo[i] = vector[i];
             }
         }
-
+        document.getElementById("result").innerHTML += "Positivo: <br>"
+        for(i = 1; i < 9; i++){
+            document.getElementById("result").innerHTML += positivo[i]+"<br>";
+        }
+        document.getElementById("result").innerHTML += "Negativo: <br>"
+        for(i = 1; i < 9; i++){
+            document.getElementById("result").innerHTML += negativo[i]+"<br>";
+        }
     }
     
 
