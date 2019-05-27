@@ -40,7 +40,7 @@
             <div class="content">
                 <h2>Exercício 4</h2>
                 <div class="text">
-
+                    Faça um algoritmo que entre com 20 números no vetor e exiba-o ordenadamente (crescente).
                 </div>
                 <div class="input">
                     <br><button onclick="exercicio()">Iniciar</button>
@@ -66,11 +66,10 @@
         for(i = 1; i < 21; i++){
             vector[i] = prompt("Digite um número");
         }
-
         vector.sort(function(a, b){return a - b});
 
-        for(i = 1; i < 21; i++){
-            document.getElementById("result").innerHTML += vector[i]+"<br>";
+        for(i = 0; i < 20; i++){
+            document.getElementById("result").innerHTML += "<br>"+vector[i]+"<br>";
         }
     }
 </script>
